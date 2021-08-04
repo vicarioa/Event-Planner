@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">>
+        <title>Your Events</title>
+    </head>
+    <h2>Welcome to Your Event Page!</h2>
+    <h3>See Event Task Items and Current Menu</h3>
+    <body>
+        <input type="text" id="txtVal">
+        <button onclick="add_event()">+Event Item</button>
+        
+        <ul id="event_list">
+            <li>Order Flowers</li>
+            <li>Make Invitations</li>
+            <li>Book venue</li>
+        </ul>
+
+        <input type="text" id="food_val">
+        <button onclick="add_menu()">+Menu Item</button>
+        
+        <ul id="menu_list">
+            <li>Steak</li>
+            <li>Mashed Potatoes</li>
+            <li>Chicken</li>
+        </ul>
+        <a href= "index.html">
+            <button>Logout</button>
+    </body>
+</html>
+
+<script>
+            
+    function add_event()
+    {
+        var txtVal = document.getElementById('txtVal').value,
+            listNode = document.getElementById('event_list'),
+            liNode = document.createElement("LI"),
+            txtNode = document.createTextNode(txtVal);
+    
+         liNode.appendChild(txtNode);
+         listNode.appendChild(liNode);
+    }
+    
+    function add_menu()
+    {
+        var txtVal = document.getElementById('food_val').value,
+            listNode = document.getElementById('menu_list'),
+            liNode = document.createElement("LI"),
+            txtNode = document.createTextNode(txtVal);
+    
+         liNode.appendChild(txtNode);
+         listNode.appendChild(liNode);
+    }
+</script>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Create Account</title>
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h2>Create an Account</h2> 
+        <form id = "registration-form">
+            <ul style="list-style-type:none;">
+           <li><input type = "text" id= "username" placeholeder = "Username"/></li> 
+           <li> <input type = "password" id = "password" placeholder = "Password"/></li>
+           <li> <input type="email" id = "email" placeholder = "E-Mail Address" /> </li>
+            </ul>
+           <!--<input type = "submit" value = "Submit"/>--> 
+        </form>
+        <!--Placeholder button to redirecto to landing page-->
+           <a href= "landing.html">
+            <button>Create Account</button>
+
+        <script> 
+            const form = document.getElementById('reg-form')
+            form.addEventListener('submit', registerUser)
+
+            function registerUser(event){
+                event.preventDefault() //prevent default behavior to refresh the page
+                const username = document.getElementById('username')
+                const password = document.getElementById('password')
+                const email = document.getElementById('email')
+            //Placeholder for db functionality
+                fetch()
+            }
+
+        </script>
+
+    </body>
+</html>

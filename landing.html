@@ -7,6 +7,8 @@
     <h2>Welcome to Your Event Page!</h2>
     <h3>See Event Task Items and Current Menu</h3>
     <body>
+        
+       <h4>Current Tasks To Do</h4> 
         <input type="text" id="txtVal">
         <button onclick="add_event()">+Event Item</button>
         
@@ -16,14 +18,26 @@
             <li>Book venue</li>
         </ul>
 
-        <input type="text" id="food_val">
+        <h4>Current Food Menu</h4> 
+        <input type="text" id="foodVal">
         <button onclick="add_menu()">+Menu Item</button>
         
-        <ul id="menu_list">
+        <ul id="menuList">
             <li>Steak</li>
             <li>Mashed Potatoes</li>
             <li>Chicken</li>
         </ul>
+
+
+       <h4>Current Wine List</h4> 
+        <ul id="wineList">
+            <li>California Sparkling</li>
+            <li>Pinot Grigio</li>
+            <li>Bordeaux</li>
+        </ul>
+        <button onclick="add_wine()">Generate Wine?</button>
+<br>
+<br>
         <a href= "index.html">
             <button>Logout</button>
     </body>
@@ -44,12 +58,18 @@
     
     function add_menu()
     {
-        var txtVal = document.getElementById('food_val').value,
-            listNode = document.getElementById('menu_list'),
+        var txtVal = document.getElementById('foodVal').value,
+            listNode = document.getElementById('menuList'),
             liNode = document.createElement("LI"),
             txtNode = document.createTextNode(txtVal);
     
          liNode.appendChild(txtNode);
          listNode.appendChild(liNode);
+    }
+
+    function add_wine() {
+        
+
+
     }
 </script>
